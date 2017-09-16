@@ -3,10 +3,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightblue"
     android:orientation="vertical"
     android:paddingLeft="20dp"
-    android:paddingRight="20dp">
+    android:paddingRight="20dp"
+    android:id="@+id/testRL">
     <!-- title for page -->
     <TextView
         android:layout_width="match_parent"
@@ -33,11 +33,16 @@
             android:text="@string/background"
             android:textColor="@color/black" />
         <!-- Will eventually use switch to change from the light blue background or another colour -->
-        <Switch
+        <CheckBox
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             tools:checked="true"
             android:id="@+id/bgSwitch"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBoxTester"
+            android:text="Hello"/>
     </LinearLayout>
 
     <LinearLayout

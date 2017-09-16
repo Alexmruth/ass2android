@@ -2,10 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/lightblue"
     android:orientation="vertical"
     android:paddingLeft="20dp"
-    android:paddingRight="20dp">
+    android:paddingRight="20dp"
+    android:id="@+id/mainRL">
     <!-- dummy clock image to hopefully later be replaced by a functioning clock that will
     show correct time -->
     <ImageView
@@ -60,21 +60,20 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="goToSettings"
             android:text="@string/settings_btn"
+            android:onClick="goToSettings"
+            android:id="@+id/settingsBtn"
             android:textSize="20sp" />
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="goToLogin"
             android:text="@string/login_btn"
             android:textSize="20sp" />
         <Button
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1.5"
-            android:onClick="goToLogin"
             android:id="@+id/testButton"
             android:textSize="20sp" />
 
