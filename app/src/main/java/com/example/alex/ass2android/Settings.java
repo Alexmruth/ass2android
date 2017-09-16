@@ -14,33 +14,36 @@ import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 
-/**
- * Created by alex on 11/09/2017.
- */
-
-/* public class Settings {
-} */
-
 public class Settings extends AppCompatActivity {
     final String PREFS_NAME = "AOP_PREFS";
     public static final String PREFS_KEY = "ADP_PREFS_String";
-   // SharedPreferences settings = getSharedPreferences(PREFS_NAME, Context.MODE_PRIVATE);
+
 
     RelativeLayout rl;
-    TextView checkBoxTest;
     CheckBox bgSwitch;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-        checkBoxTest = (TextView) findViewById(R.id.checkBoxTester);
-        // bgSwitch.setChecked(true);
-        bgSwitch = (CheckBox) findViewById(R.id.bgSwitch);
 
+        // Defining widgets
+        bgSwitch = (CheckBox) findViewById(R.id.bgSwitch);
+        rl = (RelativeLayout)findViewById(R.id.testRL);
+
+        // Retrieving sharedpreferences settings which have been stored dictating the colour of the background
         SharedPreferences prefs = getSharedPreferences("bgColour", MODE_PRIVATE);
         String colour = prefs.getString("bgColour", "WHITE");
+        
+        SharedPreferences bgColourCB = getSharedPreferences("bgColourCB", MODE_PRIVATE);
+        String isChecked = bgColourCB.getString("bgColourChecked", "false");
 
-        rl = (RelativeLayout)findViewById(R.id.testRL);
+        if(isChecked.equals("true")) {
+            bgSwitch.setChecked(true);
+        } else {
+            bgSwitch.setChecked(false);
+        }
+
+
         if(colour.equals("WHITE")) {
             rl.setBackgroundColor(Color.parseColor("#ffffff"));
         } else {
@@ -52,40 +55,36 @@ public class Settings extends AppCompatActivity {
         bgSwitch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedPreferences prefs = getSharedPreferences("bgColour", MODE_PRIVATE);
-                SharedPreferences.Editor editor = prefs.edit();
-                String colourSelected = "";
+                SharedPreferences bgColourPrefs = getSharedPreferences("bgColour", MODE_PRIVATE);
+                SharedPreferences.Editor bgEditor = bgColourPrefs.edit();
+
+                SharedPreferences bgColourCBPrefs = getSharedPreferences("bgColourCB", MODE_PRIVATE);
+                SharedPreferences.Editor bgColourEditorCB = bgColourCBPrefs.edit();
+                String colourSelected;
+                boolean checked;
 
                 if (bgSwitch.isChecked()) {
-                    checkBoxTest.setText("test");
                     colourSelected = "LIGHTBLUE";
-                    editor.putString("bgColour", colourSelected);
-                    editor.apply();
+                    bgEditor.putString("bgColour", colourSelected);
+                    bgEditor.commit();
+                    checked = true;
+                    bgColourEditorCB.putBoolean("checked", checked);
+                    bgColourEditorCB.commit();
+                    rl.setBackgroundColor(Color.parseColor("#e5feff"));
 
                 } else {
-                    checkBoxTest.setText("test2");
                     colourSelected = "WHITE";
-                    editor.putString("bgColour", colourSelected);
-                    editor.commit();
-
+                    bgEditor.putString("bgColour", colourSelected);
+                    bgEditor.commit();
+                    checked = false;
+                    bgColourEditorCB.putBoolean("checked", checked);
+                    bgColourEditorCB.commit();
+                    rl.setBackgroundColor(Color.parseColor("#ffffff"));
                 }
             }
         });
 
-        //bgSwitch.setOnCheckedChangeListener() {
-        //     checkBoxTest.setText("test");
-        // };
-
     }
-
-
-
-        /* if (bgSwitch.isChecked()) {
-            checkBoxTest.setText("test1");
-        } else {
-
-            checkBoxTest.setText("test2");
-        } */
 
 
     // This method is called when the home button is clicked, to take the user to the home page
@@ -96,6 +95,3 @@ public class Settings extends AppCompatActivity {
 
 
 }
-
-// https://developer.android.com/guide/topics/ui/controls/spinner.html
-// https://developer.android.com/guide/topics/ui/controls/spinner.html
