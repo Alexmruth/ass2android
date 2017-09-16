@@ -33,7 +33,7 @@ public class Settings extends AppCompatActivity {
         // Retrieving sharedpreferences settings which have been stored dictating the colour of the background
         SharedPreferences prefs = getSharedPreferences("bgColour", MODE_PRIVATE);
         String colour = prefs.getString("bgColour", "WHITE");
-        
+
         SharedPreferences bgColourCB = getSharedPreferences("bgColourCB", MODE_PRIVATE);
         String isChecked = bgColourCB.getString("bgColourChecked", "false");
 
