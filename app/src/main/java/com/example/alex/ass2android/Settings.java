@@ -50,6 +50,7 @@ public class Settings extends AppCompatActivity {
             rl.setBackgroundColor(Color.parseColor("#e5feff"));
         }
 
+        
 
 
         bgSwitch.setOnClickListener(new View.OnClickListener() {
