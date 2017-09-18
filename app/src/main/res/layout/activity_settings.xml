@@ -58,11 +58,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:id="@+id/timeZoneSetting"/>
-        <TextClock
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/homeClockTest"
-            android:layout_weight="1"/>
     </LinearLayout>
 
 

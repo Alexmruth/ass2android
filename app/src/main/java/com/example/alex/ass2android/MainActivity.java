@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences("settings", MODE_PRIVATE);
         String colour = prefs.getString("bgColour", "WHITE");
         String timeZone = prefs.getString("timeZone", "Default");
+        String timeZoneCity = prefs.getString("timeZoneCity", "Default");
 
         rl = (RelativeLayout)findViewById(R.id.mainRL);
         if(colour.equals("WHITE")) {
@@ -41,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         homeClock.setTimeZone(timeZone);
+        timeLocation.setText(timeZoneCity);
 
     }
     public void goToSettings(View view) {

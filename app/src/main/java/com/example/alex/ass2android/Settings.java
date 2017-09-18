@@ -113,34 +113,50 @@ public class Settings extends AppCompatActivity {
                 case "Brisbane":
                     timeZoneSet = "GMT+10";
                     sEditor.putString("timeZone", timeZoneSet);
-                    sEditor.commit();
+                    sEditor.putString("timeZoneCity", city);
                     break;
                 case "Sydney":
                     timeZoneSet = "GMT+10";
                     sEditor.putString("timeZone", timeZoneSet);
-                    sEditor.commit();
+                    sEditor.putString("timeZoneCity", city);
+
                     break;
                 case "Melbourne":
                     timeZoneSet = "GMT+10";
                     sEditor.putString("timeZone", timeZoneSet);
-                    sEditor.commit();
-                    break;
-            }
+                    sEditor.putString("timeZoneCity", city);
 
-                if (city.equals("Brisbane") || city.equals("Sydney") || city.equals("Melbourne")
-                        || city.equals("Hobart") || city.equals("Canberra")) {
+                    break;
+                case "Hobart":
                     timeZoneSet = "GMT+10";
                     sEditor.putString("timeZone", timeZoneSet);
-                    sEditor.commit();
-                } else if (city.equals("Adelaide") || city.equals("darwin")) {
+                    sEditor.putString("timeZoneCity", city);
+                    break;
+                case "Canberra":
+                    timeZoneSet = "GMT+10";
+                    sEditor.putString("timeZone", timeZoneSet);
+                    sEditor.putString("timeZoneCity", city);
+                    break;
+                case "Adelaide":
                     timeZoneSet = "Australia/Adelaide";
                     sEditor.putString("timeZone", timeZoneSet);
-                    sEditor.commit();
-                } else if (city.equals("Perth")) {
+                    sEditor.putString("timeZoneCity", city);
+
+                    break;
+                case "Darwin":
+                    timeZoneSet = "Australia/Adelaide";
+                    sEditor.putString("timeZone", timeZoneSet);
+                    sEditor.putString("timeZoneCity", city);
+
+                    break;
+                case "Perth":
                     timeZoneSet = "GMT+8";
                     sEditor.putString("timeZone", timeZoneSet);
-                    sEditor.commit();
-                };
+                    sEditor.putString("timeZoneCity", city);
+
+                    break;
+            }
+            sEditor.commit();
         }
 
         @Override
