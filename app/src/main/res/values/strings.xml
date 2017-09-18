@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">World Clock</string>
+    <string name="app_name">Australia Clock</string>
     //Countries
     <string name="aus">Australia</string>
     <string name="adelaide">Adelaide</string>
@@ -11,14 +11,13 @@
     <string name="perth">Perth</string>
     <string name="sydney">Sydney</string>
 
-    <string name="newyork">New York</string>
     // Buttons
     <string name="home_btn">Home</string>
     <string name="worldclock_btn">World Clock</string>
     <string name="settings_btn">Settings</string>
     <string name="login_btn">Login/Sign up</string>
     // home page
-    <string name="localtime">Local time</string>
+    <string name="defaulttime">Default time</string>
     // settings page
     <string name="background">Background</string>
     <string name="hometimesetting">Home page timezone</string>
@@ -26,4 +25,15 @@
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="rememberpass">Remember password?</string>
+
+    <string-array name="homeTzSetting">
+        <item>Adelaide</item>
+        <item>Brisbane</item>
+        <item>Canberra</item>
+        <item>Darwin</item>
+        <item>Hobart</item>
+        <item>Melbourne</item>
+        <item>Perth</item>
+        <item>Sydney</item>
+    </string-array>
 </resources>

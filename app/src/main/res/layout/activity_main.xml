@@ -26,21 +26,22 @@
         android:id="@+id/homeClock"/>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/timeLocation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="260dp"
-        android:text="@string/localtime"
+        android:text="@string/defaulttime"
         android:textAlignment="center"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        />
 
     <!-- button layout code -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView"
+        android:layout_below="@+id/timeLocation"
         android:layout_marginTop="40dp"
         android:layout_marginBottom="20dp"
         android:orientation="vertical"
