@@ -17,7 +17,7 @@ import org.w3c.dom.Text;
 public class MainActivity extends AppCompatActivity {
     final String PREFS_NAME = "AOP_PREFS";
     public static final String PREFS_KEY = "ADP_PREFS_String";
-    RelativeLayout rl;
+    RelativeLayout rlHome;
     Button settingsBtn;
     TextClock homeClock;
     TextView timeLocation;
@@ -34,11 +34,11 @@ public class MainActivity extends AppCompatActivity {
         String timeZone = prefs.getString("timeZone", "Default");
         String timeZoneCity = prefs.getString("timeZoneCity", "Default");
 
-        rl = (RelativeLayout)findViewById(R.id.mainRL);
+        rlHome = (RelativeLayout)findViewById(R.id.rlHome);
         if(colour.equals("WHITE")) {
-            rl.setBackgroundColor(Color.parseColor("#ffffff"));
+            rlHome.setBackgroundColor(Color.parseColor("#ffffff"));
         } else {
-            rl.setBackgroundColor(Color.parseColor("#e5feff"));
+            rlHome.setBackgroundColor(Color.parseColor("#e5feff"));
         }
 
         homeClock.setTimeZone(timeZone);
@@ -51,4 +51,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void goToTimezones(View view) {
+        Intent intent = new Intent(this, Timezones.class);
+        startActivity(intent);
+    }
 }

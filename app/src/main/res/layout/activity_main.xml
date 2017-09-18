@@ -5,7 +5,7 @@
     android:orientation="vertical"
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
-    android:id="@+id/mainRL">
+    android:id="@+id/rlHome">
     <!-- dummy clock image to hopefully later be replaced by a functioning clock that will
     show correct time -->
     <ImageView

@@ -13,7 +13,7 @@
 
     // Buttons
     <string name="home_btn">Home</string>
-    <string name="worldclock_btn">World Clock</string>
+    <string name="worldclock_btn">Australian Clock</string>
     <string name="settings_btn">Settings</string>
     <string name="login_btn">Login/Sign up</string>
     // home page

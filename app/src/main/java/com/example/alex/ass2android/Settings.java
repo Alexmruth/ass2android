@@ -38,7 +38,7 @@ public class Settings extends AppCompatActivity {
         bgSwitch = (CheckBox) findViewById(R.id.bgSwitch);
         rl = (RelativeLayout)findViewById(R.id.testRL);
         timeZoneSetting = (Spinner) findViewById(R.id.timeZoneSetting);
-        homeClock = (TextClock) findViewById(R.id.homeClockTest);
+        homeClock = (TextClock) findViewById(R.id.homeClock);
         SharedPreferences settingsPrefs = getSharedPreferences("settings", MODE_PRIVATE);
 
         /* Retrieving sharedpreferences settings which have been stored dictating the colour of the background
