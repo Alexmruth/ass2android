@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:id="@+id/llTimezones"
@@ -16,7 +16,8 @@
         android:text="@string/aus"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:id="@+id/tz1"/>
 
     <!-- below is each capital city and their timezone -->
     <LinearLayout
@@ -24,7 +25,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:background="@color/greenyblue"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_below="@+id/tz1"
+        android:id="@+id/tz2">
 
         <TextView
             android:layout_width="match_parent"
@@ -42,7 +45,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:padding="15dp"
-            android:timeZone="GMT+8" />
+            android:timeZone="Australia/Adelaide" />
     </LinearLayout>
 
     <LinearLayout
@@ -50,7 +53,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:background="@color/greenyblue"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_below="@+id/tz2"
+        android:id="@+id/tz3">
 
         <TextView
             android:layout_width="match_parent"
@@ -68,7 +73,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:padding="15dp"
-            android:timeZone="GMT+8" />
+            android:timeZone="GMT+10" />
     </LinearLayout>
 
     <LinearLayout
@@ -76,7 +81,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:background="@color/greenyblue"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_below="@+id/tz3"
+        android:id="@+id/tz4">
 
         <TextView
             android:layout_width="match_parent"
@@ -94,7 +101,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:padding="15dp"
-            android:timeZone="GMT+8" />
+            android:timeZone="GMT+10" />
     </LinearLayout>
 
     <LinearLayout
@@ -102,7 +109,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:background="@color/greenyblue"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_below="@+id/tz4"
+        android:id="@+id/tz5">
 
         <TextView
             android:layout_width="match_parent"
@@ -120,7 +129,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:padding="15dp"
-            android:timeZone="GMT+8" />
+            android:timeZone="Australia/Adelaide" />
     </LinearLayout>
 
     <LinearLayout
@@ -128,7 +137,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:background="@color/greenyblue"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_below="@+id/tz5"
+        android:id="@+id/tz6">
 
         <TextView
             android:layout_width="match_parent"
@@ -146,7 +157,7 @@
             android:layout_weight="1"
             android:gravity="center"
             android:padding="15dp"
-            android:timeZone="GMT+8" />
+            android:timeZone="GMT+10" />
     </LinearLayout>
 
     <LinearLayout
@@ -154,7 +165,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:background="@color/greenyblue"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_below="@+id/tz6"
+        android:id="@+id/tz7">
 
         <TextView
             android:layout_width="match_parent"
@@ -180,7 +193,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:background="@color/greenyblue"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_below="@+id/tz7"
+        android:id="@+id/tz8">
 
         <TextView
             android:layout_width="match_parent"
@@ -206,7 +221,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:background="@color/greenyblue"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_below="@+id/tz8"
+        android:id="@+id/tz9">
 
         <TextView
             android:layout_width="match_parent"
@@ -228,23 +245,16 @@
     </LinearLayout>
 
     <!-- button layout code -->
-    <LinearLayout
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="0dp"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="0dp"
+        android:onClick="goToHome"
+        android:orientation="horizontal"
+        android:text="@string/home_btn"
+        android:textSize="12sp"
+        />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:layout_weight="1"
-            android:onClick="goToHome"
-            android:orientation="horizontal"
-            android:text="@string/home_btn"
-            android:textSize="12sp"
-            />
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

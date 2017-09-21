@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="20dp"
@@ -14,11 +14,14 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:text="@string/login"/>
+        android:text="@string/login"
+        android:id="@+id/loginHeading"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/usernameLL"
+        android:layout_below="@+id/loginHeading">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -34,7 +37,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/passwordLL"
+        android:layout_below="@+id/usernameLL">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -51,16 +56,19 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:text="@string/login"
-        android:id="@+id/loginBtn">
+        android:id="@+id/loginBtn"
+        android:layout_below="@+id/passwordLL">
     </Button>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center">
+        android:gravity="center"
+        android:layout_below="@id/loginBtn"
+        android:id="@+id/remembermeLL">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -87,11 +95,15 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
-        android:text="@string/signup"/>
+        android:text="@string/signup"
+        android:id="@+id/signupTitle"
+        android:layout_below="@+id/remembermeLL"/>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:id="@+id/signupuserLL"
+        android:layout_below="@+id/signupTitle">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -109,7 +121,9 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_below="@+id/signupuserLL"
+        android:id="@+id/signuppassLL">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -127,9 +141,23 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="@string/signup">
+        android:id="@+id/signupBtn"
+        android:text="@string/signup"
+        android:layout_below="@+id/signuppassLL">
     </Button>
 
-</LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="0dp"
+            android:onClick="goToHome"
+            android:orientation="horizontal"
+            android:text="@string/home_btn"
+            android:textSize="12sp"
+            />
+
+</RelativeLayout>

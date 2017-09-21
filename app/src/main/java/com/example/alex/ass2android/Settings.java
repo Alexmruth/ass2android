@@ -47,13 +47,16 @@ public class Settings extends AppCompatActivity {
         String colour = settingsPrefs.getString("bgColour", "WHITE"); //string of background colour
         boolean bgChecked = settingsPrefs.getBoolean("checked", false); // boolean of if bgSwitch is checked, true or false
 
+        //Saved the state of the checkbox with shared prefs, resetting state according to bgChecked
         if (bgChecked == true) {
             bgSwitch.setChecked(true);
         } else {
             bgSwitch.setChecked(false);
         }
 
-        // If statement below sets background colour of the relative layout according to sharedpreferences settings
+        /* if statement which dictates what colour the background will be, if colour = white,
+        then background of llLogin is changed and if not white, then changed to a light blue colour
+         */
         if(colour.equals("WHITE")) {
             rl.setBackgroundColor(Color.parseColor("#ffffff"));
         } else {

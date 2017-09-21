@@ -15,8 +15,6 @@ import android.widget.TextView;
 import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
-    final String PREFS_NAME = "AOP_PREFS";
-    public static final String PREFS_KEY = "ADP_PREFS_String";
     RelativeLayout rlHome;
     Button settingsBtn;
     TextClock homeClock;
@@ -34,14 +32,18 @@ public class MainActivity extends AppCompatActivity {
         String timeZone = prefs.getString("timeZone", "Default");
         String timeZoneCity = prefs.getString("timeZoneCity", "Default");
 
+        /* if statement which dictates what colour the background will be, if colour = white,
+        then background of llLogin is changed and if not white, then changed to a light blue colour
+         */
         rlHome = (RelativeLayout)findViewById(R.id.rlHome);
         if(colour.equals("WHITE")) {
             rlHome.setBackgroundColor(Color.parseColor("#ffffff"));
         } else {
             rlHome.setBackgroundColor(Color.parseColor("#e5feff"));
         }
-
+        // Sets the timezone according to the shared prefs value which was chosen in the settings page
         homeClock.setTimeZone(timeZone);
+        // Sets the timezone city according to the shared prefs value which was chosen in the settings page
         timeLocation.setText(timeZoneCity);
 
     }

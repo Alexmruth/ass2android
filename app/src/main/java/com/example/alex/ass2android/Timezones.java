@@ -15,17 +15,20 @@ import android.widget.Toast;
 
 public class Timezones extends AppCompatActivity {
 
-    LinearLayout llTimezones;
+    RelativeLayout llTimezones;
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timezones);
 
 
-        llTimezones = (LinearLayout) findViewById(R.id.llTimezones);
+        llTimezones = (RelativeLayout) findViewById(R.id.llTimezones);
 
         SharedPreferences prefs = getSharedPreferences("settings", MODE_PRIVATE);
-        String colour = prefs.getString("bgColour", "WHITE");
 
+        /* if statement which dictates what colour the background will be, if colour = white,
+        then background of llLogin is changed and if not white, then changed to a light blue colour
+         */
+        String colour = prefs.getString("bgColour", "WHITE");
         if(colour.equals("WHITE")) {
             llTimezones.setBackgroundColor(Color.parseColor("#ffffff"));
         } else {
