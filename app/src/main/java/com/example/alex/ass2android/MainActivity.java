@@ -13,7 +13,9 @@ import android.widget.TextClock;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
-
+//https://www.androidhive.info/2013/07/how-to-implement-android-splash-screen-2/
+//https://www.androidhive.info/2013/07/how-to-implement-android-splash-screen-2/
+//https://www.androidhive.info/2013/07/how-to-implement-android-splash-screen-2/
 public class MainActivity extends AppCompatActivity {
     RelativeLayout rlHome;
     Button settingsBtn;
