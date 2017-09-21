@@ -16,6 +16,7 @@
     <string name="worldclock_btn">Australian Clock</string>
     <string name="settings_btn">Settings</string>
     <string name="login_btn">Login/Sign up</string>
+    <string name="save_btn">Save</string>
     // home page
     <string name="defaulttime">Default time</string>
     // settings page
@@ -24,7 +25,8 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
-    <string name="rememberpass">Remember password?</string>
+    <string name="signup">Sign up</string>
+    <string name="rememberpass">Remember me?</string>
 
     <string-array name="homeTzSetting">
         <item>Adelaide</item>
