@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Australia Clock</string>
+    <string name="splashInfo">By Alex Ruth</string>
+    <string name="splashInfo2">SID: 216106075</string>
     //Countries
     <string name="aus">Australia</string>
     <string name="adelaide">Adelaide</string>

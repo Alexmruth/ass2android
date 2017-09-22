@@ -13,9 +13,8 @@ import android.widget.TextClock;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
-//https://www.androidhive.info/2013/07/how-to-implement-android-splash-screen-2/
-//https://www.androidhive.info/2013/07/how-to-implement-android-splash-screen-2/
-//https://www.androidhive.info/2013/07/how-to-implement-android-splash-screen-2/
+
+
 public class MainActivity extends AppCompatActivity {
     RelativeLayout rlHome;
     Button settingsBtn;
@@ -30,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
         timeLocation = (TextView) findViewById(R.id.timeLocation);
 
         SharedPreferences prefs = getSharedPreferences("settings", MODE_PRIVATE);
+        //Getting strings that are stored in the shared prefs file
         String colour = prefs.getString("bgColour", "WHITE");
         String timeZone = prefs.getString("timeZone", "Default");
         String timeZoneCity = prefs.getString("timeZoneCity", "Default");
@@ -49,17 +49,18 @@ public class MainActivity extends AppCompatActivity {
         timeLocation.setText(timeZoneCity);
 
     }
+    //changes activity, called by settings button pressed
     public void goToSettings(View view) {
         Intent intent = new Intent(this, Settings.class);
         startActivity(intent);
     }
 
-
+    //changes activity, called by timezones button pressed
     public void goToTimezones(View view) {
         Intent intent = new Intent(this, Timezones.class);
         startActivity(intent);
     }
-
+    //changes activity, called by login button pressed
     public void goToLogin(View view) {
         Intent intent = new Intent(this, Login.class);
         startActivity(intent);

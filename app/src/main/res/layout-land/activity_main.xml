@@ -10,19 +10,19 @@
     show correct time -->
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="10dp"
         android:src="@drawable/clock" />
 
     <TextClock
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="210dp"
+        android:layout_marginTop="120dp"
         android:textAlignment="center"
-        android:textSize="40sp"
+        android:textSize="30sp"
         android:id="@+id/homeClock"/>
 
     <TextView
@@ -30,10 +30,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="260dp"
+        android:layout_marginTop="160dp"
         android:text="@string/defaulttime"
         android:textAlignment="center"
-        android:textSize="20sp"
+        android:textSize="15sp"
         />
 
     <!-- button layout code -->
@@ -41,35 +41,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/timeLocation"
-        android:layout_marginTop="40dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="0dp"
         android:orientation="vertical"
         android:layout_alignParentBottom="true">
 
-            <Button
-                android:id="@+id/worldClock"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:onClick="goToTimezones"
-                android:text="@string/worldclock_btn"
-                android:textSize="20sp" />
+        <Button
+            android:id="@+id/worldClock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="goToTimezones"
+            android:text="@string/worldclock_btn"
+            android:textSize="15sp" />
 
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/settings_btn"
-                android:onClick="goToSettings"
-                android:id="@+id/settingsBtn"
-                android:textSize="20sp" />
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="@string/login_btn"
-                android:textSize="20sp"
-                android:onClick="goToLogin"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/settings_btn"
+            android:onClick="goToSettings"
+            android:id="@+id/settingsBtn"
+            android:textSize="15sp" />
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="@string/login_btn"
+            android:textSize="15sp"
+            android:onClick="goToLogin"/>
 
 
     </LinearLayout>
