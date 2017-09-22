@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content">
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
     android:id="@+id/llTimezones"
     android:orientation="vertical"
     android:paddingLeft="20dp"
@@ -254,7 +257,9 @@
         android:onClick="goToHome"
         android:orientation="horizontal"
         android:text="@string/home_btn"
+        android:layout_below="@+id/tz9"
         android:textSize="12sp"
         />
 
 </RelativeLayout>
+</ScrollView>
